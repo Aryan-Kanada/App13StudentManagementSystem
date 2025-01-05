@@ -26,3 +26,5 @@ class AgeCalculator(QWidget):
         grid.addWidget(output_lable, 3, 0, 1, 2)
 
 
+        self.setLayout(grid)
+
