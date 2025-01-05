@@ -4,8 +4,10 @@ from PyQt6.QtWidgets import QApplication, QWidget, QLineEdit, QLabel, QPushButto
 
 
 class AgeCalculator(QWidget):
+
     def __init__(self):
-        grid = QGridLayout
+        super().__init__()
+        grid = QGridLayout()
 
         # Create Widget
         name_lable = QLabel("Name:")
@@ -25,6 +27,11 @@ class AgeCalculator(QWidget):
         grid.addWidget(calculate_button, 2, 0, 1, 2)
         grid.addWidget(output_lable, 3, 0, 1, 2)
 
-
         self.setLayout(grid)
+
+
+app = QApplication(sys.argv)
+age_calculator = AgeCalculator()
+age_calculator.show()
+sys.exit(app.exec())
 
